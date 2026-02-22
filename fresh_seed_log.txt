@@ -1,0 +1,70 @@
+
+  Dropping all tables  78ms DONE
+
+   INFO  Preparing database.  
+
+  Creating migration table  8ms DONE
+
+   INFO  Running migrations.  
+
+  2014_10_12_000000_create_users_table  24ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table  6ms DONE
+  2019_08_19_000000_create_failed_jobs_table  25ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table  23ms DONE
+  2024_01_01_000001_create_sliders_table  5ms DONE
+  2024_01_01_000002_create_beritas_table  42ms DONE
+  2024_01_01_000003_create_profils_table  145ms DONE
+  2024_01_01_000004_create_potensis_table  24ms DONE
+  2024_01_01_000005_create_statistiks_table  6ms DONE
+  2024_01_01_000006_create_unduhans_table  6ms DONE
+  2024_01_01_000007_create_faqs_table  11ms DONE
+  2024_01_01_000008_create_desas_table  25ms DONE
+  2024_01_01_000009_create_settings_table  18ms DONE
+  2024_01_01_000010_create_strukturs_table  36ms DONE
+  2024_01_01_000011_update_users_table  5ms DONE
+  2024_02_10_000001_add_video_to_sliders_table  0ms DONE
+  2024_02_15_000000_create_profils_table  0ms DONE
+  2026_02_11_000000_add_role_to_users_table  0ms DONE
+  2026_02_19_000001_add_contact_fields_to_potensis_table  32ms DONE
+  2026_02_19_000002_add_label_to_statistiks_table  20ms DONE
+
+
+   INFO  Seeding database.  
+
+  Database\Seeders\UserSeeder  RUNNING  
+
+✅ Admin user created successfully!
+   Email: admin@tahunan.id
+   Password: admin123
+
+  Database\Seeders\UserSeeder  287 ms DONE  
+
+  Database\Seeders\SettingSeeder  RUNNING  
+  Database\Seeders\SettingSeeder  12 ms DONE  
+
+  Database\Seeders\SliderSeeder  RUNNING  
+  Database\Seeders\SliderSeeder  4 ms DONE  
+
+  Database\Seeders\ProfilSeeder  RUNNING  
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'type' in 'field list' (Connection: mysql, SQL: insert into `profils` (`type`, `title`, `content`, `image`, `additional_data`, `created_at`, `updated_at`) values (sejarah, Sejarah Kecamatan Tahunan, <p>Kecamatan Tahunan merupakan salah satu kecamatan di Kabupaten Jepara yang memiliki sejarah panjang. Nama Tahunan sendiri memiliki makna historis yang erat kaitannya dengan tradisi dan budaya masyarakat setempat.</p><p>Pembentukan Kecamatan Tahunan tidak terlepas dari perkembangan pemerintahan di Kabupaten Jepara. Seiring berjalannya waktu, Kecamatan Tahunan terus berkembang menjadi pusat pemerintahan dan pelayanan masyarakat yang lebih baik.</p>, ?, ?, 2026-02-21 17:19:08, 2026-02-21 17:19:08))
+
+  at vendor\laravel\framework\src\Illuminate\Database\Connection.php:829
+    825▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    826▕                 );
+    827▕             }
+    828▕ 
+  ➜ 829▕             throw new QueryException(
+    830▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    831▕             );
+    832▕         }
+    833▕     }
+
+  1   vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:39
+      PDOException::("SQLSTATE[42S22]: Column not found: 1054 Unknown column 'type' in 'field list'")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\MySqlConnection.php:39
+      PDO::prepare("insert into `profils` (`type`, `title`, `content`, `image`, `additional_data`, `created_at`, `updated_at`) values (?, ?, ?, ?, ?, ?, ?)")
+
