@@ -17,3 +17,26 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# Log & temporary files
+*.log
+log_tail*.txt
+fresh_seed_log.txt
+seed_log.txt
+migrate_output.txt
+
+# Script utilitiy sementara
+SETUP_NOW.bat
+PUSH_GITHUB.bat
+check_reset_admin.php
+create-admin.php
+copy_assets.php
+check.ps1
+download_php.ps1
+find_php.ps1
+run_composer.ps1
+setup_php.ps1
+update-potensi-category.php
+
+# File true]  (corrupted)
+true])
